@@ -35,4 +35,8 @@ But, for LBP based face detector It performs comparison but uses histograms of p
 Then, face preprocessing is performed to give final result Separate histogram equalization for left and right sides
 This process standardizes the brightness and contrast on both the left and right hand sides of face independently.
 Smoothening - It reduces the image noise using a bilateral filter.
+The final result looks like this --
 
+
+ ![Final Image](https://github.com/aditi-mishra/Face-Detection/blob/master/pic.png)
+ 
