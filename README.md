@@ -26,3 +26,13 @@ The libraries , we used are -
 6. objdetect -> It helps in detection of objects and instances of the predefined classes.for example, faces, eyes, mugs etc. 
 
 We captured the videostream from our webcam. The, we stored each frame of our video stream into a mat object. We converted the Mat color object into gray object. The, we scaled our gray image to a constant width of 320. For a width of 320, we also scaled our height appropriately. This was done for our cascade classifier to run better. As , we are using pre- built classifier, it works better on small width images, but not too small. So, we chose a medium Size image.
+Now coming to the classifier part which will detect face:
+In 2001 Viola and Jones invented the Haar based cascade classifier for object detection and in 2002 in was improved by Heinhart and Maydt. The result is an object detector that is both fast and reliable (detects approx. 95% of frontal face correctly).
+It works not only for frontal faces but also side view faces, eyes, mouth etc. however in our project we have used only frontal face classifier.
+We have used LBP based detector as it is several times faster than Haar based detector.
+Haar based detector: it performs detection by doing comparison like; if we look at frontal face, region with eye should be darker than forehead and cheeks, and region with mouth darker than cheeks.
+But, for LBP based face detector It performs comparison but uses histograms of pixel intensity comparison such as edges, corners and flat regions.
+Then, face preprocessing is performed to give final result Separate histogram equalization for left and right sides
+This process standardizes the brightness and contrast on both the left and right hand sides of face independently.
+Smoothening - It reduces the image noise using a bilateral filter.
+
